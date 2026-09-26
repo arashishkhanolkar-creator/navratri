@@ -12,6 +12,7 @@
   --accent: #350a41;
   --gold: #f4ab2f;
   --nav-height: 64px;
+  --card-shadow: 0 10px 28px -8px rgba(53, 10, 65, 0.16), 0 2px 6px -2px rgba(53, 10, 65, 0.08);
 }
 
 @theme inline {
@@ -39,6 +40,7 @@
     --primary-foreground: #150a0d;
     --accent: #a855c9;
     --gold: #f0c14b;
+    --card-shadow: 0 10px 28px -8px rgba(0, 0, 0, 0.45), 0 2px 6px -2px rgba(0, 0, 0, 0.3);
   }
 }
 

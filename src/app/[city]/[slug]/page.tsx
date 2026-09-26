@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { MapPin, Clock, Ticket } from "lucide-react";
 import StickyBookBar from "@/components/StickyBookBar";
 import DateBadge from "@/components/DateBadge";
+import SaveButton from "@/components/SaveButton";
 import { CITIES, getAllEvents, getEventBySlug, formatDateRange } from "@/lib/events";
 import { CITY_LABELS, type City } from "@/lib/types";
 
@@ -86,7 +87,7 @@ export default async function EventPage({
 
       <div className="flex items-start gap-3">
         <DateBadge startDate={event.startDate} size="md" />
-        <div className="min-w-0">
+        <div className="min-w-0 flex-1">
           <span
             className="text-[11px] font-semibold uppercase tracking-wide"
             style={{ color: "var(--primary)" }}
@@ -95,11 +96,12 @@ export default async function EventPage({
           </span>
           <h1 className="text-xl font-extrabold leading-tight">{event.name}</h1>
         </div>
+        <SaveButton city={event.city} slug={event.slug} variant="plain" size={18} />
       </div>
 
       <div
-        className="mt-5 flex flex-col gap-3 rounded-2xl border p-4"
-        style={{ borderColor: "var(--border)", background: "var(--surface)" }}
+        className="mt-5 flex flex-col gap-3 rounded-[20px] p-4"
+        style={{ background: "var(--surface)", boxShadow: "var(--card-shadow)" }}
       >
         <div className="flex items-start gap-2.5 text-sm">
           <MapPin size={17} className="mt-0.5 shrink-0" style={{ color: "var(--muted)" }} />

@@ -2,13 +2,14 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, MapPin, PlusCircle } from "lucide-react";
+import { Home, MapPin, Bookmark, PlusCircle } from "lucide-react";
 
 const items = [
   { href: "/", label: "Home", icon: Home },
   { href: "/mumbai", label: "Mumbai", icon: MapPin },
   { href: "/ahmedabad", label: "Ahmedabad", icon: MapPin },
-  { href: "/submit-event", label: "List Event", icon: PlusCircle },
+  { href: "/saved", label: "Saved", icon: Bookmark },
+  { href: "/submit-event", label: "List", icon: PlusCircle },
 ] as const;
 
 export default function BottomNav() {
@@ -32,7 +33,7 @@ export default function BottomNav() {
             <Link
               key={href}
               href={href}
-              className="flex flex-1 flex-col items-center gap-0.5 py-2.5 text-[11px] font-medium"
+              className="flex flex-1 flex-col items-center gap-0.5 py-2.5 text-[10px] font-medium"
               style={{ color: active ? "var(--primary)" : "var(--muted)" }}
             >
               <Icon size={20} strokeWidth={active ? 2.4 : 2} />

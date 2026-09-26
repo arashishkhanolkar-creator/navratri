@@ -38,8 +38,8 @@ export default function EventsBrowser({ events }: { events: EventItem[] }) {
     <div>
       <div className="flex items-center gap-2">
         <div
-          className="flex flex-1 items-center gap-2 rounded-full border px-3.5 py-2.5"
-          style={{ borderColor: "var(--border)", background: "var(--surface)" }}
+          className="flex flex-1 items-center gap-2 rounded-2xl px-4 py-3"
+          style={{ background: "var(--surface)", boxShadow: "var(--card-shadow)" }}
         >
           <Search size={16} style={{ color: "var(--muted)" }} />
           <input
@@ -53,8 +53,8 @@ export default function EventsBrowser({ events }: { events: EventItem[] }) {
           type="button"
           onClick={() => setSortAz((v) => !v)}
           aria-label={sortAz ? "Sort by date" : "Sort A-Z"}
-          className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-white"
-          style={{ background: "var(--accent)" }}
+          className="flex h-[46px] w-[46px] shrink-0 items-center justify-center rounded-2xl text-white"
+          style={{ background: "var(--accent)", boxShadow: "var(--card-shadow)" }}
         >
           {sortAz ? <ArrowDownAZ size={18} /> : <CalendarClock size={18} />}
         </button>
@@ -69,8 +69,8 @@ export default function EventsBrowser({ events }: { events: EventItem[] }) {
             className="rounded-full px-3.5 py-1.5 text-xs font-semibold transition-colors"
             style={
               city === c
-                ? { background: "var(--primary)", color: "white" }
-                : { background: "var(--surface)", color: "var(--muted)", border: "1px solid var(--border)" }
+                ? { background: "var(--primary)", color: "white", boxShadow: "var(--card-shadow)" }
+                : { background: "var(--surface)", color: "var(--muted)", boxShadow: "var(--card-shadow)" }
             }
           >
             {c === "all" ? "All Cities" : CITY_LABELS[c]}

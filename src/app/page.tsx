@@ -5,6 +5,12 @@ import { getAllEvents, daysUntil } from "@/lib/events";
 
 const NAVRATRI_START = "2026-10-11";
 
+const quickActions = [
+  { href: "/mumbai", label: "Mumbai", icon: MapPin },
+  { href: "/ahmedabad", label: "Ahmedabad", icon: MapPin },
+  { href: "/submit-event", label: "List Event", icon: PlusCircle },
+] as const;
+
 export default function Home() {
   const events = getAllEvents();
   const days = daysUntil(NAVRATRI_START);
@@ -12,8 +18,11 @@ export default function Home() {
   return (
     <div className="px-4 py-4">
       <div
-        className="overflow-hidden rounded-2xl px-5 py-6 text-white"
-        style={{ background: "linear-gradient(135deg, var(--accent), var(--primary))" }}
+        className="overflow-hidden rounded-[22px] px-5 py-6 text-white"
+        style={{
+          background: "linear-gradient(135deg, var(--accent), var(--primary))",
+          boxShadow: "var(--card-shadow)",
+        }}
       >
         <p className="text-xs font-semibold uppercase tracking-wide opacity-80">
           {days > 0 ? `${days} day${days === 1 ? "" : "s"} to go` : "Happening now"}
@@ -34,45 +43,22 @@ export default function Home() {
       </div>
 
       <div className="mt-4 grid grid-cols-3 gap-3">
-        <Link
-          href="/mumbai"
-          className="flex flex-col items-center gap-2 rounded-2xl border py-3.5"
-          style={{ borderColor: "var(--border)", background: "var(--surface)" }}
-        >
-          <span
-            className="flex h-9 w-9 items-center justify-center rounded-full"
-            style={{ background: "color-mix(in srgb, var(--primary) 15%, transparent)" }}
+        {quickActions.map(({ href, label, icon: Icon }) => (
+          <Link
+            key={href}
+            href={href}
+            className="flex flex-col items-center gap-2 rounded-2xl py-3.5"
+            style={{ background: "var(--surface)", boxShadow: "var(--card-shadow)" }}
           >
-            <MapPin size={18} style={{ color: "var(--primary)" }} />
-          </span>
-          <span className="text-xs font-semibold">Mumbai</span>
-        </Link>
-        <Link
-          href="/ahmedabad"
-          className="flex flex-col items-center gap-2 rounded-2xl border py-3.5"
-          style={{ borderColor: "var(--border)", background: "var(--surface)" }}
-        >
-          <span
-            className="flex h-9 w-9 items-center justify-center rounded-full"
-            style={{ background: "color-mix(in srgb, var(--primary) 15%, transparent)" }}
-          >
-            <MapPin size={18} style={{ color: "var(--primary)" }} />
-          </span>
-          <span className="text-xs font-semibold">Ahmedabad</span>
-        </Link>
-        <Link
-          href="/submit-event"
-          className="flex flex-col items-center gap-2 rounded-2xl border py-3.5"
-          style={{ borderColor: "var(--border)", background: "var(--surface)" }}
-        >
-          <span
-            className="flex h-9 w-9 items-center justify-center rounded-full"
-            style={{ background: "color-mix(in srgb, var(--primary) 15%, transparent)" }}
-          >
-            <PlusCircle size={18} style={{ color: "var(--primary)" }} />
-          </span>
-          <span className="text-xs font-semibold">List Event</span>
-        </Link>
+            <span
+              className="flex h-9 w-9 items-center justify-center rounded-full"
+              style={{ background: "color-mix(in srgb, var(--primary) 15%, transparent)" }}
+            >
+              <Icon size={18} style={{ color: "var(--primary)" }} />
+            </span>
+            <span className="text-xs font-semibold">{label}</span>
+          </Link>
+        ))}
       </div>
 
       <div className="mt-6">

@@ -40,8 +40,8 @@ export default async function CityPage({
   return (
     <div className="px-4 py-4">
       <div
-        className="flex rounded-full border p-1"
-        style={{ borderColor: "var(--border)" }}
+        className="flex rounded-full p-1.5"
+        style={{ background: "var(--surface)", boxShadow: "var(--card-shadow)" }}
       >
         {CITIES.map((c) => (
           <Link

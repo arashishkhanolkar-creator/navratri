@@ -5,12 +5,13 @@ import type { EventItem } from "@/lib/types";
 import { formatDateRange } from "@/lib/events";
 import DateBadge from "@/components/DateBadge";
 import TicketButton from "@/components/TicketButton";
+import SaveButton from "@/components/SaveButton";
 
 export default function EventCard({ event }: { event: EventItem }) {
   return (
     <div
-      className="flex items-center gap-3 rounded-2xl border p-3 active:scale-[0.99] transition-transform"
-      style={{ borderColor: "var(--border)", background: "var(--surface)" }}
+      className="flex items-center gap-3 rounded-[20px] p-3.5 active:scale-[0.98] transition-transform"
+      style={{ background: "var(--surface)", boxShadow: "var(--card-shadow)" }}
     >
       {event.imageUrl ? (
         <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-xl">
@@ -45,13 +46,16 @@ export default function EventCard({ event }: { event: EventItem }) {
           event={event}
           className="rounded-full bg-[var(--primary)] px-3.5 py-1.5 text-xs font-bold text-white shadow-sm active:opacity-80"
         />
-        <Link
-          href={`/${event.city}/${event.slug}`}
-          className="flex items-center text-[11px]"
-          style={{ color: "var(--muted)" }}
-        >
-          Details <ChevronRight size={13} />
-        </Link>
+        <div className="flex items-center gap-1.5">
+          <Link
+            href={`/${event.city}/${event.slug}`}
+            className="flex items-center text-[11px]"
+            style={{ color: "var(--muted)" }}
+          >
+            Details <ChevronRight size={13} />
+          </Link>
+          <SaveButton city={event.city} slug={event.slug} variant="plain" size={13} containerSize={22} />
+        </div>
       </div>
     </div>
   );
