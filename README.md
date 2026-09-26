@@ -56,8 +56,8 @@ so the site works fine before you've signed up for either.
 
 ## Going live checklist
 
-1. Replace the placeholder events in `src/data/events.ts` with real,
-   verified listings (working ticket links are non-negotiable).
+1. Click-check every `verified: true` event in `src/data/events.ts` (see
+   `EVENTS_TODO.md` for what's still pending/staged as `verified: false`).
 2. Set `NEXT_PUBLIC_SITE_URL` to your real domain once you have one.
 3. Create a Google Analytics 4 property, set `NEXT_PUBLIC_GA_ID`.
 4. Apply for [Google AdSense](https://www.google.com/adsense/) — approval is
