@@ -3,8 +3,13 @@ import type { City, EventItem } from "@/lib/types";
 
 export const CITIES: City[] = ["mumbai", "ahmedabad"];
 
+// Only `verified: true` events are shown publicly or get a static page —
+// unverified entries stay in src/data/events.ts as a staging list until
+// someone has clicked through and confirmed the ticket link/date/venue.
 export function getAllEvents(): EventItem[] {
-  return [...events].sort((a, b) => a.startDate.localeCompare(b.startDate));
+  return events
+    .filter((e) => e.verified)
+    .sort((a, b) => a.startDate.localeCompare(b.startDate));
 }
 
 export function getEventsByCity(city: City): EventItem[] {
@@ -12,7 +17,13 @@ export function getEventsByCity(city: City): EventItem[] {
 }
 
 export function getEventBySlug(city: City, slug: string): EventItem | undefined {
-  return events.find((e) => e.city === city && e.slug === slug);
+  return events.find((e) => e.city === city && e.slug === slug && e.verified);
+}
+
+// For internal use only (e.g. a checklist of what still needs verifying) —
+// never rendered on any public page.
+export function getUnverifiedEvents(): EventItem[] {
+  return events.filter((e) => !e.verified);
 }
 
 export function buildTicketUrl(event: EventItem): string {

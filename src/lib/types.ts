@@ -16,6 +16,7 @@ export type EventItem = {
   sourceUrl?: string;
   description?: string;
   verified: boolean; // whether the ticket link/date has been confirmed from a live source
+  verificationNote?: string; // internal note only — why this isn't verified yet, never rendered publicly
 };
 
 export const CITY_LABELS: Record<City, string> = {
