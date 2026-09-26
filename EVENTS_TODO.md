@@ -17,18 +17,29 @@ Dussehra Oct 20.
 - `karnavati-no-sanedo-2026` — venue confirmed (Aagman Party Plot, Gota), but the ticket page itself still shows 2025-era dates — do not publish dates as-is
 - `raatladi-26` — generic ticket URL, no confirmed 2026 dates, **shares a venue (Mahendra Farm) with `saibo-garba-2026` below** — resolve which is real / whether both are
 - `kesari-raat-2026` — has an official-site ticket link, but venue name conflicts between the organizer's own site (Umiya Farm) and a Showmates listing (Milan Farm)
-- `saibo-garba-2026` — has a ticket link, but shares a venue (Mahendra Farm) with `raatladi-26` — see above
+- `saibo-garba-2026` — venue is now doubly uncertain: Showmates says Mahendra Farm (conflicting with `raatladi-26`), District.in says a different venue entirely (Vivenza by Gopi Farm, Ognaj) — do not publish until resolved
+- `garba-dhoom-2026` — Infiniti Mall, Malad West, Mumbai — full Oct 11-21 date range confirmed from two sources (more confident than most on dates), but no confirmed 2026 ticket-purchase link (linked page is the mall's own announcement, not a "buy now" page)
 
 Each has a `verificationNote` field in `src/data/events.ts` explaining the
 specific gap.
 
 ## Found but not added (no usable ticket link, or too unreliable to publish)
 - **Navratri Utsav ft. Falguni Pathak** (Jio World Convention Centre, Mumbai)
-  — BookMyShow-exclusive, well-confirmed via press coverage (Oct 11–19,
-  Season Pass ₹20,000, PODs up to ~₹2 lakh) but no direct BookMyShow URL
-  found. BookMyShow/press may also list this under the name **"Radiance
-  Dandiya"** — try that search term too if you're chasing the link yourself
-  on BookMyShow's app/site directly.
+  — three research passes, still no 2026 link. Confirmed the event's real
+  name IS "**Radiance Dandiya**" (produced by Purple Blue Events & Ideas
+  with TribeVibe Entertainment, a BookMyShow-owned company) — but every
+  dated detail found is for the **2025** edition (Sept 22–Oct 1, 2025, from
+  ₹1,799). No 2026 date, venue confirmation, or URL has surfaced anywhere
+  searchable — likely announced through channels outside search indexing.
+  Check BookMyShow's app directly closer to the date rather than searching
+  again.
+- **Shubharambh 2026 Mumbai** is a touring franchise (confirmed Delhi
+  edition at Bharat Mandapam, Oct 16-18) — already staged as
+  `shubharambh-2026-mumbai` above with the same gap (venue/dates unknown).
+- **RaasRatri** (Club O7, Shela, Ahmedabad, near/adjacent to Bopal) —
+  described as a premium venue but no event-specific date, price, or ticket
+  URL found; only a generic pointer to getyourpass.store as the likely
+  booking platform.
 - **Goregaon Sports Club Navratri Mahotsav** (Mumbai) — 50+ year running
   event, but no online ticket link found at all; likely sold at-gate or via
   the club's Facebook page (facebook.com/goregaonnavratri) rather than a
@@ -66,3 +77,14 @@ specific gap.
 - Re-check closer to Oct 1: more events and exact venues typically firm up
   as the festival approaches, and some of the "found but not added" items
   above may get a real ticket link by then.
+- A third research pass specifically targeting other Mumbai suburbs
+  (Andheri, Powai, Kandivali, Vashi, Thane, Dahisar, Kharghar, Chembur,
+  Ghatkopar — including mall-specific searches like Viviana Mall, R City
+  Mall, Growel's 101) and Ahmedabad neighborhoods (Vastrapur, Satellite,
+  Naranpura, Maninagar, Prahlad Nagar, Nikol, Vejalpur, Thaltej) came back
+  almost empty — only generic listicles, no citable venue+date+link. This
+  suggests garba events in those specific areas run through local
+  mandals/WhatsApp/Instagram rather than indexed web listings. Further web
+  search there is likely low-yield; if you want coverage in those areas,
+  local Instagram/Facebook searching or word-of-mouth outreach will work
+  better than more search passes.
