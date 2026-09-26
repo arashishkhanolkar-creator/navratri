@@ -51,8 +51,8 @@ export const events: EventItem[] = [
     slug: "raas-utsav-pre-navratri-2026",
     name: "Raas Utsav – Pre Navratri ft. Naitik Nagda",
     city: "mumbai",
-    venue: "Mulund",
-    area: "Mulund, Mumbai",
+    venue: "Richardson and Cruddas Jumbo Facility Centre",
+    area: "Byculla, Mumbai",
     startDate: "2026-10-02",
     endDate: "2026-10-04",
     time: "Evening onwards",
@@ -61,7 +61,7 @@ export const events: EventItem[] = [
       "https://www.district.in/events/raas-utsav-pre-navratri-naitik-nagda-oct2-2026-buy-tickets",
     ticketPlatform: "District",
     description:
-      "A pre-Navratri garba night in Mulund featuring Naitik Nagda, running Oct 2–4, ahead of Ghatasthapana on Oct 11.",
+      "A pre-Navratri garba night in Byculla featuring Naitik Nagda, running Oct 2–4, ahead of Ghatasthapana on Oct 11.",
     verified: true,
   },
   {
@@ -98,6 +98,89 @@ export const events: EventItem[] = [
     verified: false,
     verificationNote:
       "District.in landing page found via search but no venue/date/price detail surfaced. District also runs a same-named Delhi edition — do not mix up. Confirm venue + exact dates before publishing.",
+  },
+
+  // ---------------- THANE ----------------
+  {
+    slug: "raas-rang-thane-2026",
+    name: "Raas Rang Thane 2026 ft. Naitik Nagda",
+    city: "thane",
+    venue: "Raymond Ground, Eastern Express Highway",
+    area: "Thane West",
+    startDate: "2026-10-11",
+    endDate: "2026-10-20",
+    organizer: "CREDAI MCHI Thane, with Dharmaveer Anand Dighe Pratishthan",
+    priceRange: "Historically free/contest-based passes (2026 pricing not confirmed)",
+    description:
+      "A 10-night flagship Thane garba event running since 2017, featuring Naitik Nagda and N2 Band. Historically run on a free/contest-pass model via social media rather than paid ticketing — no direct booking link found. Check raasrang.in or facebook.com/raasrangthane closer to the date.",
+    verified: true,
+  },
+
+  // ---------------- NAVI MUMBAI ----------------
+  {
+    slug: "navrang-garba-navi-mumbai-2026",
+    name: "Navrang Garba",
+    city: "navi-mumbai",
+    venue: "D-33, Turbhe MIDC Road, TTC Industrial Area",
+    area: "Turbhe, Navi Mumbai",
+    startDate: "2026-10-11",
+    endDate: "2026-10-19",
+    priceRange: "See ticket page",
+    description: "A recurring 9-night garba event at a dedicated venue in Turbhe.",
+    verified: false,
+    verificationNote:
+      "Venue and the event's recurring nature are well corroborated (a 2025 District.in page plus third-party ticketing tooling built specifically for this event), but the only findable ticket URL is explicitly last year's (district.in/events/navrang-garba-25-buy-tickets) — do not use it for 2026. Find and confirm a live 2026 booking link before publishing.",
+  },
+
+  // ---------------- PUNE ----------------
+  {
+    slug: "dandiya-fever-9-0-pune-2026",
+    name: "Dandiya Fever 9.0 (aka Dandiya Dhoom 9.0)",
+    city: "pune",
+    venue: "Multiple venues: The Orchid Hotel (Balewadi), Mahalakshmi Lawns (Kharadi), Amanora Fern by Marriott (Magarpatta)",
+    area: "Pune",
+    startDate: "2026-10-16",
+    endDate: "2026-10-18",
+    time: "5:30 PM – 10:30 PM",
+    organizer: "Linkin Minds",
+    priceRange: "See ticket page",
+    ticketUrl:
+      "https://www.district.in/events/dandiya-fever-90-at-amonara-ferm-by-marriott-oct16-2026-buy-tickets",
+    ticketPlatform: "District",
+    description:
+      "A multi-venue dandiya festival across three Pune locations (year 9 of the franchise). This listing links to the Amanora Fern by Marriott venue — the same event also runs at The Orchid Hotel, Balewadi (via SortMyScene) on the same dates.",
+    verified: true,
+  },
+  {
+    slug: "raas-rang-dandiya-pune-2026",
+    name: "Raas Rang Dandiya 4.0",
+    city: "pune",
+    venue: "BHS Open Ground",
+    area: "Pune",
+    startDate: "2026-10-16",
+    endDate: "2026-10-18",
+    time: "6:00 PM onwards",
+    priceRange: "See ticket page",
+    description:
+      "Billed as \"Pune's Biggest Open-Air Garba Nights.\" Listed on District.in but no specific event-page URL could be confirmed — search District for this event directly, or check their Instagram for offline ticket info.",
+    verified: true,
+  },
+  {
+    slug: "rangilo-raas-garba-pune-2026",
+    name: "Rangilo Raas Garba",
+    city: "pune",
+    venue: "Raghunandan AC Banquet & Lawns",
+    area: "Pune",
+    startDate: "2026-10-16",
+    endDate: "2026-10-20",
+    time: "6:00 PM onwards",
+    priceRange: "From ₹249",
+    ticketUrl: "https://www.mepass.in/city/Pune/events/rangilo-raas-garba-20",
+    ticketPlatform: "MePass",
+    description: "Described as a 5-night garba event at Raghunandan AC Banquet & Lawns.",
+    verified: false,
+    verificationNote:
+      "\"Rangilo Raas\" is a multi-city franchise name — other search results for the same name point to unrelated Mumbai and Ahmedabad venues/dates. Confirm this specific link is genuinely the Pune/Raghunandan Lawns edition before publishing. End date (Oct 20) is inferred from a \"5 nights\" description starting Oct 16, not independently confirmed.",
   },
 
   // ---------------- AHMEDABAD ----------------
@@ -419,6 +502,40 @@ export const events: EventItem[] = [
     priceRange: "Free entry",
     description:
       "Gujarat Tourism's government-hosted Navratri festival at GMDC Ground — nightly Maha Aarti, food court, and handicraft bazaar. This is a free, open cultural event rather than a ticketed one, so there's no booking link — just show up. Check gujarattourism.com closer to the date for exact timings.",
+    verified: true,
+  },
+
+  // ---------------- SURAT ----------------
+  {
+    slug: "suvarn-navratri-2026",
+    name: "Suvarn Navratri",
+    city: "surat",
+    venue: "Exclusive Dome (also runs at Premium Dome, Techno Garba Dome, and Mandli Garba Ground)",
+    area: "Surat",
+    startDate: "2026-10-11",
+    endDate: "2026-10-20",
+    priceRange: "See ticket page",
+    ticketUrl: "https://www.fastticket.live/event/surat/suvarn-navratri-exclusive-dome/4820",
+    ticketPlatform: "FastTicket",
+    description:
+      "A large, multi-venue Surat production across four separate domes/grounds, with a lineup including Himesh Reshammiya, Mika Singh, Kailash Kher, Aditya Narayan, Shirley Setia, Sachet-Parampara, and more (spread across the different venues). This listing links to the Exclusive Dome — the Premium Dome, Techno Garba Dome, and Mandli Garba Ground editions are separate FastTicket listings for the same festival.",
+    verified: true,
+  },
+  {
+    slug: "yashvi-navratri-3-0-2026",
+    name: "Yashvi Navratri 3.0 ft. Purva Mantri",
+    city: "surat",
+    venue: "C.B. Patel Cricket Stadium (Yashvi Navratri AC Dome)",
+    area: "Vesu Canal Road, Abhva, Surat",
+    startDate: "2026-10-11",
+    endDate: "2026-10-20",
+    time: "8:00 PM",
+    organizer: "Yashvi Entertainments",
+    priceRange: "Gold ₹1,999 / VIP ₹4,499 / VVIP ₹6,499",
+    ticketUrl: "https://www.yashvi-entertainments.com/events/yashvi-navratri-3-0",
+    ticketPlatform: "Yashvi Entertainments (official site)",
+    description:
+      "AC Dome garba nights at C.B. Patel Cricket Stadium featuring Purva Mantri, confirmed across the organizer's own site and two independent ticketing platforms.",
     verified: true,
   },
 ];
