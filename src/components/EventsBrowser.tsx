@@ -60,13 +60,13 @@ export default function EventsBrowser({ events }: { events: EventItem[] }) {
         </button>
       </div>
 
-      <div className="mt-3 flex gap-2">
+      <div className="-mx-4 mt-3 flex gap-2 overflow-x-auto px-4 pb-1">
         {(["all", ...CITIES] as CityFilter[]).map((c) => (
           <button
             key={c}
             type="button"
             onClick={() => setCity(c)}
-            className="rounded-full px-3.5 py-1.5 text-xs font-semibold transition-colors"
+            className="shrink-0 whitespace-nowrap rounded-full px-3.5 py-1.5 text-xs font-semibold transition-colors"
             style={
               city === c
                 ? { background: "var(--primary)", color: "white", boxShadow: "var(--card-shadow)" }

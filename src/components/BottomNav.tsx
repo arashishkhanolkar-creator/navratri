@@ -3,11 +3,11 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Home, MapPin, Bookmark, PlusCircle } from "lucide-react";
+import { CITIES } from "@/lib/events";
 
 const items = [
   { href: "/", label: "Home", icon: Home },
-  { href: "/mumbai", label: "Mumbai", icon: MapPin },
-  { href: "/ahmedabad", label: "Ahmedabad", icon: MapPin },
+  { href: "/cities", label: "Cities", icon: MapPin },
   { href: "/saved", label: "Saved", icon: Bookmark },
   { href: "/submit-event", label: "List", icon: PlusCircle },
 ] as const;
@@ -28,7 +28,12 @@ export default function BottomNav() {
       <div className="flex items-stretch justify-around">
         {items.map(({ href, label, icon: Icon }) => {
           const active =
-            href === "/" ? pathname === "/" : pathname.startsWith(href);
+            href === "/"
+              ? pathname === "/"
+              : href === "/cities"
+                ? pathname === "/cities" ||
+                  CITIES.some((c) => pathname === `/${c}`)
+                : pathname.startsWith(href);
           return (
             <Link
               key={href}

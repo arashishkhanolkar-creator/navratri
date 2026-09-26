@@ -4,7 +4,7 @@ import { CONTACT_EMAIL } from "@/lib/config";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "GarbaGo helps you find garba and dandiya events in Mumbai and Ahmedabad and book tickets directly with organizers.",
+    "GarbaGo helps you find garba and dandiya events in Mumbai, Pune, Ahmedabad, Surat, and nearby cities, and book tickets directly with organizers.",
 };
 
 export default function AboutPage() {
@@ -13,7 +13,8 @@ export default function AboutPage() {
       <h1>About GarbaGo</h1>
       <p>
         GarbaGo is a free directory of garba nights, dandiya raas,
-        and pandal celebrations in Mumbai and Ahmedabad. We list event
+        and pandal celebrations across Mumbai, Navi Mumbai, Thane,
+        Kalyan-Dombivali, Pune, Ahmedabad, and Surat. We list event
         details — date, venue, and price — and link you straight to the
         organizer&apos;s official ticket page so you can book directly.
       </p>

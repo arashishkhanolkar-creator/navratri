@@ -39,19 +39,16 @@ export default async function CityPage({
 
   return (
     <div className="px-4 py-4">
-      <div
-        className="flex rounded-full p-1.5"
-        style={{ background: "var(--surface)", boxShadow: "var(--card-shadow)" }}
-      >
+      <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1">
         {CITIES.map((c) => (
           <Link
             key={c}
             href={`/${c}`}
-            className="flex-1 rounded-full py-2 text-center text-sm font-semibold transition-colors"
+            className="shrink-0 whitespace-nowrap rounded-full px-4 py-2 text-sm font-semibold transition-colors"
             style={
               c === city
-                ? { background: "var(--primary)", color: "white" }
-                : { color: "var(--muted)" }
+                ? { background: "var(--primary)", color: "white", boxShadow: "var(--card-shadow)" }
+                : { background: "var(--surface)", color: "var(--muted)", boxShadow: "var(--card-shadow)" }
             }
           >
             {CITY_LABELS[c]}

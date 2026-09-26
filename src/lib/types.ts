@@ -1,4 +1,11 @@
-export type City = "mumbai" | "ahmedabad";
+export type City =
+  | "mumbai"
+  | "navi-mumbai"
+  | "thane"
+  | "kalyan-dombivali"
+  | "pune"
+  | "ahmedabad"
+  | "surat";
 
 export type EventItem = {
   slug: string;
@@ -22,5 +29,10 @@ export type EventItem = {
 
 export const CITY_LABELS: Record<City, string> = {
   mumbai: "Mumbai",
+  "navi-mumbai": "Navi Mumbai",
+  thane: "Thane",
+  "kalyan-dombivali": "Kalyan-Dombivali",
+  pune: "Pune",
   ahmedabad: "Ahmedabad",
+  surat: "Surat",
 };

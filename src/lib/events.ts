@@ -1,7 +1,15 @@
 import { events } from "@/data/events";
 import type { City, EventItem } from "@/lib/types";
 
-export const CITIES: City[] = ["mumbai", "ahmedabad"];
+export const CITIES: City[] = [
+  "mumbai",
+  "navi-mumbai",
+  "thane",
+  "kalyan-dombivali",
+  "pune",
+  "ahmedabad",
+  "surat",
+];
 
 // Only `verified: true` events are shown publicly or get a static page —
 // unverified entries stay in src/data/events.ts as a staging list until

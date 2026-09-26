@@ -1,15 +1,10 @@
 import Link from "next/link";
-import { MapPin, PlusCircle } from "lucide-react";
+import { MapPin, ChevronRight } from "lucide-react";
 import EventsBrowser from "@/components/EventsBrowser";
-import { getAllEvents, daysUntil } from "@/lib/events";
+import { CITIES, getAllEvents, daysUntil } from "@/lib/events";
+import { CITY_LABELS } from "@/lib/types";
 
 const NAVRATRI_START = "2026-10-11";
-
-const quickActions = [
-  { href: "/mumbai", label: "Mumbai", icon: MapPin },
-  { href: "/ahmedabad", label: "Ahmedabad", icon: MapPin },
-  { href: "/submit-event", label: "List Event", icon: PlusCircle },
-] as const;
 
 export default function Home() {
   const events = getAllEvents();
@@ -42,21 +37,28 @@ export default function Home() {
         </a>
       </div>
 
-      <div className="mt-4 grid grid-cols-3 gap-3">
-        {quickActions.map(({ href, label, icon: Icon }) => (
+      <div className="mt-5 flex items-center justify-between">
+        <h2 className="text-base font-bold">Browse by City</h2>
+        <Link
+          href="/cities"
+          className="flex items-center text-xs font-semibold"
+          style={{ color: "var(--primary)" }}
+        >
+          See all <ChevronRight size={14} />
+        </Link>
+      </div>
+      <div className="-mx-4 mt-3 flex gap-2.5 overflow-x-auto px-4 pb-1">
+        {CITIES.map((city) => (
           <Link
-            key={href}
-            href={href}
-            className="flex flex-col items-center gap-2 rounded-2xl py-3.5"
+            key={city}
+            href={`/${city}`}
+            className="flex shrink-0 items-center gap-2 rounded-full px-4 py-2.5"
             style={{ background: "var(--surface)", boxShadow: "var(--card-shadow)" }}
           >
-            <span
-              className="flex h-9 w-9 items-center justify-center rounded-full"
-              style={{ background: "color-mix(in srgb, var(--primary) 15%, transparent)" }}
-            >
-              <Icon size={18} style={{ color: "var(--primary)" }} />
+            <MapPin size={14} style={{ color: "var(--primary)" }} />
+            <span className="whitespace-nowrap text-sm font-semibold">
+              {CITY_LABELS[city]}
             </span>
-            <span className="text-xs font-semibold">{label}</span>
           </Link>
         ))}
       </div>

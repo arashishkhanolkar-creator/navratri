@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     template: "%s | GarbaGo",
   },
   description:
-    "Find Navratri garba and dandiya events in Mumbai and Ahmedabad, with direct links to book tickets. Updated listings, free to browse.",
+    "Find Navratri garba and dandiya events in Mumbai, Pune, Ahmedabad, Surat, and nearby cities, with direct links to book tickets. Updated listings, free to browse.",
   openGraph: {
     type: "website",
     siteName: "GarbaGo",
