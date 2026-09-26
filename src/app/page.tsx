@@ -11,9 +11,9 @@ export default function Home() {
   const days = daysUntil(NAVRATRI_START);
 
   return (
-    <div className="px-4 py-4">
+    <div className="px-4 py-4 md:px-8 md:py-6 lg:px-10">
       <div
-        className="overflow-hidden rounded-[22px] px-5 py-6 text-white"
+        className="overflow-hidden rounded-[22px] px-5 py-6 text-white md:px-10 md:py-10"
         style={{
           background: "linear-gradient(135deg, var(--accent), var(--primary))",
           boxShadow: "var(--card-shadow)",
@@ -22,10 +22,10 @@ export default function Home() {
         <p className="text-xs font-semibold uppercase tracking-wide opacity-80">
           {days > 0 ? `${days} day${days === 1 ? "" : "s"} to go` : "Happening now"}
         </p>
-        <h1 className="mt-1.5 text-xl font-extrabold leading-snug">
+        <h1 className="mt-1.5 text-xl font-extrabold leading-snug md:text-3xl">
           Find Garba &amp; Dandiya Events Near You
         </h1>
-        <p className="mt-1.5 text-sm opacity-90">
+        <p className="mt-1.5 text-sm opacity-90 md:text-base">
           Browse listings, tap to book — always free to search.
         </p>
         <a
@@ -47,7 +47,7 @@ export default function Home() {
           See all <ChevronRight size={14} />
         </Link>
       </div>
-      <div className="-mx-4 mt-3 flex gap-2.5 overflow-x-auto px-4 pb-1">
+      <div className="-mx-4 mt-3 flex gap-2.5 overflow-x-auto px-4 pb-1 md:-mx-8 md:px-8 lg:-mx-10 lg:px-10">
         {CITIES.map((city) => (
           <Link
             key={city}

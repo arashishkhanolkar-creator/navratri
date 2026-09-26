@@ -38,8 +38,8 @@ export default async function CityPage({
   const events = getEventsByCity(city);
 
   return (
-    <div className="px-4 py-4">
-      <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1">
+    <div className="px-4 py-4 md:px-8 md:py-6 lg:px-10">
+      <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 md:-mx-8 md:px-8 lg:-mx-10 lg:px-10">
         {CITIES.map((c) => (
           <Link
             key={c}
@@ -61,9 +61,9 @@ export default async function CityPage({
         tap Book to go to the ticket page
       </p>
 
-      <div className="mt-3 flex flex-col gap-2.5">
+      <div className="mt-3 grid grid-cols-1 gap-2.5 md:grid-cols-2 lg:grid-cols-3">
         {events.length === 0 ? (
-          <p className="py-8 text-center text-sm" style={{ color: "var(--muted)" }}>
+          <p className="col-span-full py-8 text-center text-sm" style={{ color: "var(--muted)" }}>
             No events listed yet for {CITY_LABELS[city]} — check back soon.
           </p>
         ) : (

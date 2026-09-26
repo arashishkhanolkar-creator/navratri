@@ -79,7 +79,7 @@ export default async function EventPage({
   };
 
   return (
-    <div className="px-4 py-4">
+    <div className="mx-auto max-w-2xl px-4 py-4 md:px-8 md:py-8">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

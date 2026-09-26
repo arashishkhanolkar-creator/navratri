@@ -24,7 +24,7 @@ export default function SavedPage() {
   );
 
   return (
-    <div className="px-4 py-4">
+    <div className="px-4 py-4 md:px-8 md:py-6 lg:px-10">
       <h1 className="text-xl font-extrabold">Saved Events</h1>
       <p className="mt-1 text-sm" style={{ color: "var(--muted)" }}>
         Tap the bookmark icon on any event to save it here — stored only on
@@ -42,7 +42,7 @@ export default function SavedPage() {
           </p>
         </div>
       ) : (
-        <div className="mt-5 flex flex-col gap-2.5">
+        <div className="mt-5 grid grid-cols-1 gap-2.5 md:grid-cols-2 lg:grid-cols-3">
           {savedEvents.map((event) => (
             <EventCard key={`${event.city}-${event.slug}`} event={event} />
           ))}

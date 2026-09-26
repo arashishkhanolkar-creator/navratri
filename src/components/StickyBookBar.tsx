@@ -4,7 +4,7 @@ import TicketButton from "@/components/TicketButton";
 export default function StickyBookBar({ event }: { event: EventItem }) {
   return (
     <div
-      className="safe-bottom fixed bottom-0 left-1/2 z-40 w-full max-w-[480px] -translate-x-1/2 border-t px-4 py-3"
+      className="safe-bottom fixed bottom-0 left-1/2 z-40 w-full max-w-[480px] -translate-x-1/2 border-t px-4 py-3 md:max-w-[900px] md:px-8 lg:max-w-[1200px]"
       style={{ borderColor: "var(--border)", background: "var(--surface)" }}
     >
       <div className="flex items-center gap-3">

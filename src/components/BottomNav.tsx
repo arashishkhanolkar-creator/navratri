@@ -22,7 +22,7 @@ export default function BottomNav() {
 
   return (
     <nav
-      className="safe-bottom fixed bottom-0 left-1/2 z-40 w-full max-w-[480px] -translate-x-1/2 border-t bg-(--color-surface)/95 backdrop-blur"
+      className="safe-bottom fixed bottom-0 left-1/2 z-40 w-full max-w-[480px] -translate-x-1/2 border-t bg-(--color-surface)/95 backdrop-blur md:hidden"
       style={{ borderColor: "var(--border)" }}
     >
       <div className="flex items-stretch justify-around">

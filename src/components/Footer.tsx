@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer
-      className="mt-8 border-t px-4 py-6 text-xs"
+      className="mt-8 border-t px-4 py-6 text-xs md:px-8 lg:px-10"
       style={{ borderColor: "var(--border)", color: "var(--muted)" }}
     >
       <p className="mb-3 leading-relaxed">

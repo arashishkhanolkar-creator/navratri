@@ -45,7 +45,7 @@
 }
 
 body {
-  background: var(--background);
+  background: color-mix(in srgb, var(--background) 92%, var(--border));
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -61,11 +61,23 @@ body {
   min-height: 100dvh;
   background: var(--background);
   position: relative;
-  box-shadow: 0 0 0 1px var(--border);
 }
 
 @media (min-width: 480px) {
   .app-shell {
     min-height: 100vh;
+  }
+}
+
+@media (min-width: 768px) {
+  .app-shell {
+    max-width: 900px;
+    box-shadow: 0 0 0 1px var(--border);
+  }
+}
+
+@media (min-width: 1200px) {
+  .app-shell {
+    max-width: 1200px;
   }
 }

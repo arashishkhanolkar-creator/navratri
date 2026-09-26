@@ -12,13 +12,13 @@ export const metadata: Metadata = {
 
 export default function CitiesPage() {
   return (
-    <div className="px-4 py-4">
+    <div className="px-4 py-4 md:px-8 md:py-6 lg:px-10">
       <h1 className="text-xl font-extrabold">Browse by City</h1>
       <p className="mt-1 text-sm" style={{ color: "var(--muted)" }}>
         Pick a city to see its Navratri 2026 events.
       </p>
 
-      <div className="mt-5 flex flex-col gap-2.5">
+      <div className="mt-5 grid grid-cols-1 gap-2.5 md:grid-cols-2 lg:grid-cols-3">
         {CITIES.map((city) => {
           const count = getEventsByCity(city).length;
           return (

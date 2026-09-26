@@ -60,7 +60,7 @@ export default function EventsBrowser({ events }: { events: EventItem[] }) {
         </button>
       </div>
 
-      <div className="-mx-4 mt-3 flex gap-2 overflow-x-auto px-4 pb-1">
+      <div className="-mx-4 mt-3 flex gap-2 overflow-x-auto px-4 pb-1 md:-mx-8 md:px-8 lg:-mx-10 lg:px-10">
         {(["all", ...CITIES] as CityFilter[]).map((c) => (
           <button
             key={c}
@@ -81,7 +81,7 @@ export default function EventsBrowser({ events }: { events: EventItem[] }) {
       {!query && city === "all" && featured.length > 0 && (
         <div className="mt-6">
           <h2 className="text-base font-bold">Featured Events</h2>
-          <div className="-mx-4 mt-3 flex gap-3 overflow-x-auto px-4 pb-1">
+          <div className="-mx-4 mt-3 flex gap-3 overflow-x-auto px-4 pb-1 md:-mx-8 md:px-8 lg:-mx-10 lg:px-10">
             {featured.map((event) => (
               <FeaturedEventCard key={`f-${event.city}-${event.slug}`} event={event} />
             ))}
@@ -96,9 +96,9 @@ export default function EventsBrowser({ events }: { events: EventItem[] }) {
         </span>
       </div>
 
-      <div className="mt-3 flex flex-col gap-2.5">
+      <div className="mt-3 grid grid-cols-1 gap-2.5 md:grid-cols-2 lg:grid-cols-3">
         {filtered.length === 0 ? (
-          <p className="py-8 text-center text-sm" style={{ color: "var(--muted)" }}>
+          <p className="col-span-full py-8 text-center text-sm" style={{ color: "var(--muted)" }}>
             No events match your search.
           </p>
         ) : (
