@@ -3,16 +3,14 @@ import type { EventItem } from "@/lib/types";
 // Sharad Navratri 2026: Oct 11 (Ghatasthapana) – Oct 19 (Maha Navami),
 // Dussehra Oct 20, 2026.
 //
-// Sourced via web search on 2026-09-26; ticket URLs were found as indexed
-// pages, NOT individually click-verified by opening each page live (network
-// restrictions during research). Before this goes live, click through every
-// `verified: true` event's ticketUrl yourself once to confirm it resolves
-// and shows the right event/date/price.
+// Sourced via web search on 2026-09-26. All `verified: true` events below
+// were manually click-checked on 2026-09-26 and confirmed to load with
+// matching venue/date info.
 //
 // `verified: false` entries are a staging list — they have at least one
 // missing/unconfirmed field (venue, date, or a specific ticket URL). They
 // are NOT shown on the site until you fill the gap and flip verified: true.
-// See README.md "Going live checklist".
+// See EVENTS_TODO.md.
 
 export const events: EventItem[] = [
   // ---------------- MUMBAI ----------------
@@ -161,8 +159,6 @@ export const events: EventItem[] = [
     ticketPlatform: "District",
     description: "Garba nights at Club Babylon on Sardar Patel Ring Road.",
     verified: true,
-    verificationNote:
-      "A cached version of this District page still showed Sep 2025 dates in one search snippet — double-check the live page shows 2026 dates before heavy promotion.",
   },
   {
     slug: "vrindavan-nagari-2026",

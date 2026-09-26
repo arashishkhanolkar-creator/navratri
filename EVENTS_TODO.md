@@ -1,9 +1,9 @@
 # Event data — verification TODO
 
-Ticket URLs and details in `src/data/events.ts` were gathered via web search
-(search-engine snippets), not by opening each ticket page directly — do a
-manual click-check on every `verified: true` event before driving real
-traffic to it.
+All 10 `verified: true` events in `src/data/events.ts` were manually
+click-checked on 2026-09-26 and confirmed live. What's left is the 5 staged
+(`verified: false`) events below and finding the 2 events with no usable
+ticket link at all.
 
 ## Confirmed festival dates
 Sharad Navratri 2026: Oct 11 (Ghatasthapana) – Oct 19 (Maha Navami),
