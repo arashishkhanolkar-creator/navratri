@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 import type { EventItem } from "@/lib/types";
 import { formatDateRange } from "@/lib/events";
@@ -11,7 +12,13 @@ export default function EventCard({ event }: { event: EventItem }) {
       className="flex items-center gap-3 rounded-2xl border p-3 active:scale-[0.99] transition-transform"
       style={{ borderColor: "var(--border)", background: "var(--surface)" }}
     >
-      <DateBadge startDate={event.startDate} />
+      {event.imageUrl ? (
+        <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-xl">
+          <Image src={event.imageUrl} alt="" fill sizes="56px" className="object-cover" />
+        </div>
+      ) : (
+        <DateBadge startDate={event.startDate} />
+      )}
 
       <Link
         href={`/${event.city}/${event.slug}`}

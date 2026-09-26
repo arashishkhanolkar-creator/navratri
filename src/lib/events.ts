@@ -38,6 +38,12 @@ export function buildTicketUrl(event: EventItem): string {
   }
 }
 
+export function daysUntil(dateStr: string): number {
+  const target = new Date(`${dateStr}T00:00:00+05:30`);
+  const diffMs = target.getTime() - Date.now();
+  return Math.ceil(diffMs / (1000 * 60 * 60 * 24));
+}
+
 export function formatDateRange(event: EventItem): string {
   const start = new Date(event.startDate);
   const startStr = start.toLocaleDateString("en-IN", {

@@ -13,6 +13,7 @@ export type EventItem = {
   priceRange?: string; // e.g. "₹499 - ₹1,999"
   ticketUrl: string;
   ticketPlatform?: string; // e.g. "BookMyShow", "Insider.in", "District"
+  imageUrl?: string; // event poster/banner image, if we have a direct link
   sourceUrl?: string;
   description?: string;
   verified: boolean; // whether the ticket link/date has been confirmed from a live source
