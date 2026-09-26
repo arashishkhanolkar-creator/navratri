@@ -22,7 +22,7 @@ export default function Footer() {
         </Link>
       </div>
       <p className="mt-3">
-        © {new Date().getFullYear()} Navratri Events. Not affiliated with
+        © {new Date().getFullYear()} GarbaGo. Not affiliated with
         BookMyShow, Insider.in, or District.
       </p>
     </footer>

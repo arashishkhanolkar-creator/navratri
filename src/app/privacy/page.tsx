@@ -13,7 +13,7 @@ export default function PrivacyPage() {
 
       <h2>What this site does</h2>
       <p>
-        Navratri Events lists garba and dandiya event information and links
+        GarbaGo lists garba and dandiya event information and links
         to third-party ticketing platforms (such as BookMyShow, Insider.in,
         or District) or event organizers where you can purchase tickets. We
         do not sell tickets ourselves and do not process payments or collect

@@ -1,4 +1,4 @@
-# Navratri Events
+# GarbaGo
 
 A free directory of Navratri garba/dandiya events in Mumbai and Ahmedabad,
 linking straight to ticket booking pages. Monetized via Google AdSense and

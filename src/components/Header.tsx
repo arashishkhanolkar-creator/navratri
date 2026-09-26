@@ -8,9 +8,7 @@ export default function Header() {
     >
       <Link href="/" className="flex items-center gap-1.5">
         <span className="text-xl">🪔</span>
-        <span className="text-[15px] font-bold tracking-tight">
-          Navratri Events
-        </span>
+        <span className="text-[15px] font-bold tracking-tight">GarbaGo</span>
       </Link>
     </header>
   );

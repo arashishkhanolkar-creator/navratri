@@ -22,14 +22,14 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://example.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Navratri Events 2026 — Garba & Dandiya Nights Near You",
-    template: "%s | Navratri Events",
+    default: "GarbaGo — Navratri Garba & Dandiya Events Near You",
+    template: "%s | GarbaGo",
   },
   description:
     "Find Navratri garba and dandiya events in Mumbai and Ahmedabad, with direct links to book tickets. Updated listings, free to browse.",
   openGraph: {
     type: "website",
-    siteName: "Navratri Events",
+    siteName: "GarbaGo",
   },
 };
 

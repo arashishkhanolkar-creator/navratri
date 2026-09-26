@@ -29,7 +29,7 @@ export function getUnverifiedEvents(): EventItem[] {
 export function buildTicketUrl(event: EventItem): string {
   try {
     const url = new URL(event.ticketUrl);
-    url.searchParams.set("utm_source", "navratrievents");
+    url.searchParams.set("utm_source", "garbago");
     url.searchParams.set("utm_medium", "referral");
     url.searchParams.set("utm_campaign", event.slug);
     return url.toString();

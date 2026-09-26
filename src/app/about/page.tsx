@@ -4,15 +4,15 @@ import { CONTACT_EMAIL } from "@/lib/config";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Navratri Events helps you find garba and dandiya events in Mumbai and Ahmedabad and book tickets directly with organizers.",
+    "GarbaGo helps you find garba and dandiya events in Mumbai and Ahmedabad and book tickets directly with organizers.",
 };
 
 export default function AboutPage() {
   return (
     <div className="mx-auto max-w-2xl px-4 py-10 prose prose-neutral dark:prose-invert">
-      <h1>About Navratri Events</h1>
+      <h1>About GarbaGo</h1>
       <p>
-        Navratri Events is a free directory of garba nights, dandiya raas,
+        GarbaGo is a free directory of garba nights, dandiya raas,
         and pandal celebrations in Mumbai and Ahmedabad. We list event
         details — date, venue, and price — and link you straight to the
         organizer&apos;s official ticket page so you can book directly.
