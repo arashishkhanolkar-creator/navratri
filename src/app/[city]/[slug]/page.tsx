@@ -65,12 +65,16 @@ export default async function EventPage({
     ...(event.organizer
       ? { organizer: { "@type": "Organization", name: event.organizer } }
       : {}),
-    offers: {
-      "@type": "Offer",
-      url: event.ticketUrl,
-      availability: "https://schema.org/InStock",
-      ...(event.priceRange ? { priceCurrency: "INR" } : {}),
-    },
+    ...(event.ticketUrl
+      ? {
+          offers: {
+            "@type": "Offer",
+            url: event.ticketUrl,
+            availability: "https://schema.org/InStock",
+            ...(event.priceRange ? { priceCurrency: "INR" } : {}),
+          },
+        }
+      : {}),
   };
 
   return (
@@ -128,10 +132,21 @@ export default async function EventPage({
         </p>
       )}
 
-      <p className="mt-6 text-xs" style={{ color: "var(--muted)" }}>
-        Booking happens on {event.ticketPlatform ?? "the organizer's site"} —
-        we may earn a referral commission at no extra cost to you.
-      </p>
+      {event.ticketUrl ? (
+        <p className="mt-6 text-xs" style={{ color: "var(--muted)" }}>
+          Booking happens on {event.ticketPlatform ?? "the organizer's site"} —
+          we may earn a referral commission at no extra cost to you.
+        </p>
+      ) : event.priceRange?.toLowerCase().includes("free") ? (
+        <p className="mt-6 text-xs" style={{ color: "var(--muted)" }}>
+          This is a free, open event — no ticket or booking required.
+        </p>
+      ) : (
+        <p className="mt-6 text-xs" style={{ color: "var(--muted)" }}>
+          We don&apos;t have a direct ticket link for this event yet — check
+          back soon, or search for it directly on BookMyShow/District.
+        </p>
+      )}
 
       <StickyBookBar event={event} />
     </div>

@@ -26,7 +26,8 @@ export function getUnverifiedEvents(): EventItem[] {
   return events.filter((e) => !e.verified);
 }
 
-export function buildTicketUrl(event: EventItem): string {
+export function buildTicketUrl(event: EventItem): string | undefined {
+  if (!event.ticketUrl) return undefined;
   try {
     const url = new URL(event.ticketUrl);
     url.searchParams.set("utm_source", "garbago");

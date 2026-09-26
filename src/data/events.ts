@@ -375,4 +375,50 @@ export const events: EventItem[] = [
     verificationNote:
       "Full Oct 11-21 date range confirmed across two independent sources (the mall's own page and a news article) — more confident on dates than most staged entries. But no confirmed 2026 ticket-purchase link was found; the 2025 edition sold via BookMyShow. The linked page is the mall's own announcement page, not a confirmed 'buy now' page — check whether tickets are on BookMyShow before publishing.",
   },
+
+  // ---------------- CONFIRMED EVENTS, NO TICKET LINK YET ----------------
+  // These are real, well-corroborated events (press coverage or official
+  // organizer confirmation) where we simply haven't found a bookable URL.
+  // Shown on the site as "Tickets Coming Soon" rather than hidden entirely.
+  {
+    slug: "radiance-dandiya-falguni-pathak-2026",
+    name: "Navratri Utsav ft. Falguni Pathak (Radiance Dandiya)",
+    city: "mumbai",
+    venue: "Jio World Convention Centre",
+    area: "BKC, Mumbai",
+    startDate: "2026-10-11",
+    endDate: "2026-10-19",
+    organizer: "TribeVibe Entertainment & Alphonso Studios (Purple Blue Events & Ideas)",
+    priceRange: "Season Pass ₹20,000/person; premium 12-person POD ~₹2 lakh",
+    description:
+      "A large-scale Falguni Pathak dandiya show at Jio World Convention Centre, BKC — also marketed under the name \"Radiance Dandiya.\" Well confirmed via press coverage (dates, venue, pricing), but no direct BookMyShow event URL has been found despite repeated searches. Likely BookMyShow-exclusive — check the BookMyShow app directly if you want to book.",
+    verified: true,
+  },
+  {
+    slug: "goregaon-sports-club-navratri-2026",
+    name: "Goregaon Sports Club Navratri Mahotsav",
+    city: "mumbai",
+    venue: "Goregaon Sports Club",
+    area: "Goregaon–Malad Link Road, Mumbai",
+    startDate: "2026-10-11",
+    endDate: "2026-10-19",
+    priceRange: "Historically ₹500–1,500/day, season pass ~₹4,000 (2026 pricing not yet confirmed)",
+    description:
+      "A 50+ year running Navratri Mahotsav organized by the Goregaon Navratri Mahotsav Mandal. No online ticket link found — tickets are typically sold at the gate or announced via the mandal's Facebook page (facebook.com/goregaonnavratri) closer to the date. Dates above are an estimate based on the standard Navratri window, not independently confirmed for 2026.",
+    verified: true,
+  },
+  {
+    slug: "vibrant-navratri-festival-2026",
+    name: "Vibrant Navratri Festival",
+    city: "ahmedabad",
+    venue: "GMDC Ground",
+    area: "Ahmedabad",
+    startDate: "2026-10-11",
+    endDate: "2026-10-20",
+    organizer: "Gujarat Tourism",
+    priceRange: "Free entry",
+    description:
+      "Gujarat Tourism's government-hosted Navratri festival at GMDC Ground — nightly Maha Aarti, food court, and handicraft bazaar. This is a free, open cultural event rather than a ticketed one, so there's no booking link — just show up. Check gujarattourism.com closer to the date for exact timings.",
+    verified: true,
+  },
 ];
