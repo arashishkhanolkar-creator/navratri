@@ -31,6 +31,9 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "GarbaGo",
   },
+  verification: {
+    google: "4ZQ6UiXjqcpa04DqtqrigWwrU3YWV-9QyLYnK2D_O0s",
+  },
 };
 
 export const viewport: Viewport = {
