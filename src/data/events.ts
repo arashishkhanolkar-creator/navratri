@@ -279,6 +279,7 @@ export const events: EventItem[] = [
     venue: "Venue to be confirmed",
     area: "Ahmedabad",
     startDate: "2026-10-10",
+    endDate: "2026-10-19",
     time: "Evening onwards",
     priceRange: "See ticket page",
     ticketUrl: "https://www.district.in/events/sacred-raas-oct10-2026-buy-tickets",
