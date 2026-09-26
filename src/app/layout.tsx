@@ -45,9 +45,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <AdSense />
+      </head>
       <body className="min-h-full">
         <GoogleAnalytics />
-        <AdSense />
         <div className="app-shell flex min-h-dvh flex-col">
           <Header />
           <main className="flex-1 pb-24">{children}</main>
