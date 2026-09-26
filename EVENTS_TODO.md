@@ -1,13 +1,10 @@
 # Event data — verification TODO
 
-All 15 `verified: true` events in `src/data/events.ts` need a manual
-click-check before you drive real traffic to them. The original 10 were
-checked on 2026-09-26 and confirmed live. 5 more were added in a second
-research pass (2026-09-26) and still need the same check:
+All 14 `verified: true` events in `src/data/events.ts` have been manually
+click-checked and confirmed live (original 10 on 2026-09-26, plus 4 more —
 `navrang-navratri-2026`, `pyc-navratri-2026`, `maavdee-navratri-2026`,
-`aadhyashakti-garba-2026`. (The 5th slot in that pass, PYC, is already
-listed — just re-count: 4 new verified events this round, one Mumbai +
-three Ahmedabad.)
+`aadhyashakti-garba-2026` — added in a second research pass and confirmed
+the same day). What's left is the 7 staged (`verified: false`) events below.
 
 ## Confirmed festival dates
 Sharad Navratri 2026: Oct 11 (Ghatasthapana) – Oct 19 (Maha Navami),

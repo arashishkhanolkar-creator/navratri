@@ -1,3 +1,1 @@
-# Replace this file's contents with the line Google AdSense gives you
-# after your site is approved, e.g.:
-# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+google.com, pub-7718762621197247, DIRECT, f08c47fec0942fa0
