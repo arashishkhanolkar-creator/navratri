@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import TicketButton from "@/components/TicketButton";
+import { MapPin, Clock, Ticket } from "lucide-react";
+import StickyBookBar from "@/components/StickyBookBar";
+import DateBadge from "@/components/DateBadge";
 import { CITIES, getAllEvents, getEventBySlug, formatDateRange } from "@/lib/events";
 import { CITY_LABELS, type City } from "@/lib/types";
 
@@ -72,40 +74,66 @@ export default async function EventPage({
   };
 
   return (
-    <div className="mx-auto max-w-3xl px-4 py-10">
+    <div className="px-4 py-4">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <p className="text-sm font-medium uppercase tracking-wide text-orange-600">
-        {CITY_LABELS[event.city]} · {formatDateRange(event)}
-      </p>
-      <h1 className="mt-1 text-2xl sm:text-3xl font-bold">{event.name}</h1>
-      <p className="mt-2 text-black/60 dark:text-white/60">
-        {event.venue}, {event.area}
-      </p>
-      {event.time && (
-        <p className="mt-1 text-black/60 dark:text-white/60">{event.time}</p>
-      )}
-      {event.priceRange && (
-        <p className="mt-3 text-lg font-semibold">{event.priceRange}</p>
-      )}
-      {event.description && (
-        <p className="mt-4 leading-relaxed">{event.description}</p>
-      )}
 
-      <div className="mt-8">
-        <TicketButton
-          event={event}
-          className="inline-flex items-center justify-center rounded-full bg-orange-600 px-6 py-3 text-base font-semibold text-white hover:bg-orange-700 transition-colors"
-        />
+      <div className="flex items-start gap-3">
+        <DateBadge startDate={event.startDate} size="md" />
+        <div className="min-w-0">
+          <span
+            className="text-[11px] font-semibold uppercase tracking-wide"
+            style={{ color: "var(--primary)" }}
+          >
+            {CITY_LABELS[event.city]}
+          </span>
+          <h1 className="text-xl font-extrabold leading-tight">{event.name}</h1>
+        </div>
+      </div>
+
+      <div
+        className="mt-5 flex flex-col gap-3 rounded-2xl border p-4"
+        style={{ borderColor: "var(--border)", background: "var(--surface)" }}
+      >
+        <div className="flex items-start gap-2.5 text-sm">
+          <MapPin size={17} className="mt-0.5 shrink-0" style={{ color: "var(--muted)" }} />
+          <span>
+            {event.venue}, {event.area}
+          </span>
+        </div>
+        <div className="flex items-start gap-2.5 text-sm">
+          <Clock size={17} className="mt-0.5 shrink-0" style={{ color: "var(--muted)" }} />
+          <span>
+            {formatDateRange(event)}
+            {event.time ? ` · ${event.time}` : ""}
+          </span>
+        </div>
         {event.ticketPlatform && (
-          <p className="mt-2 text-xs text-black/50 dark:text-white/50">
-            You&apos;ll be redirected to {event.ticketPlatform} to complete
-            your booking.
-          </p>
+          <div className="flex items-start gap-2.5 text-sm">
+            <Ticket size={17} className="mt-0.5 shrink-0" style={{ color: "var(--muted)" }} />
+            <span>Tickets via {event.ticketPlatform}</span>
+          </div>
         )}
       </div>
+
+      {event.description && (
+        <p className="mt-5 text-sm leading-relaxed">{event.description}</p>
+      )}
+
+      {event.organizer && (
+        <p className="mt-4 text-xs" style={{ color: "var(--muted)" }}>
+          Organized by {event.organizer}
+        </p>
+      )}
+
+      <p className="mt-6 text-xs" style={{ color: "var(--muted)" }}>
+        Booking happens on {event.ticketPlatform ?? "the organizer's site"} —
+        we may earn a referral commission at no extra cost to you.
+      </p>
+
+      <StickyBookBar event={event} />
     </div>
   );
 }

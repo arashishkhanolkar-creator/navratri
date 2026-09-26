@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import EventCard from "@/components/EventCard";
 import { CITIES, getEventsByCity } from "@/lib/events";
@@ -37,26 +38,41 @@ export default async function CityPage({
   const events = getEventsByCity(city);
 
   return (
-    <div className="mx-auto max-w-5xl px-4 py-10">
-      <h1 className="text-2xl sm:text-3xl font-bold">
-        Navratri Events in {CITY_LABELS[city]}
-      </h1>
-      <p className="mt-2 text-black/60 dark:text-white/60">
-        {events.length} event{events.length === 1 ? "" : "s"} listed. Tap
-        &ldquo;Get Tickets&rdquo; to book directly with the organizer.
+    <div className="px-4 py-4">
+      <div
+        className="flex rounded-full border p-1"
+        style={{ borderColor: "var(--border)" }}
+      >
+        {CITIES.map((c) => (
+          <Link
+            key={c}
+            href={`/${c}`}
+            className="flex-1 rounded-full py-2 text-center text-sm font-semibold transition-colors"
+            style={
+              c === city
+                ? { background: "var(--primary)", color: "white" }
+                : { color: "var(--muted)" }
+            }
+          >
+            {CITY_LABELS[c]}
+          </Link>
+        ))}
+      </div>
+
+      <p className="mt-4 text-xs" style={{ color: "var(--muted)" }}>
+        {events.length} event{events.length === 1 ? "" : "s"} listed &middot;
+        tap Book to go to the ticket page
       </p>
 
-      {events.length === 0 ? (
-        <p className="mt-8 text-black/60 dark:text-white/60">
-          No events listed yet for {CITY_LABELS[city]} — check back soon.
-        </p>
-      ) : (
-        <div className="mt-8 grid gap-4 sm:grid-cols-2">
-          {events.map((event) => (
-            <EventCard key={event.slug} event={event} />
-          ))}
-        </div>
-      )}
+      <div className="mt-3 flex flex-col gap-2.5">
+        {events.length === 0 ? (
+          <p className="py-8 text-center text-sm" style={{ color: "var(--muted)" }}>
+            No events listed yet for {CITY_LABELS[city]} — check back soon.
+          </p>
+        ) : (
+          events.map((event) => <EventCard key={event.slug} event={event} />)
+        )}
+      </div>
     </div>
   );
 }
